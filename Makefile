@@ -1,6 +1,6 @@
 install: #Устанавливаем Poetry
 	poetry install
-brain-games: #Запускаем игру
+brain-games: #Приветствие
 	poetry run brain-games
 build: #Собираем пакет
 	poetry build
@@ -10,3 +10,7 @@ package-install: #Устанавливаем пакет из ОС
 	python3 -m pip install --user dist/*.whl
 lint: #Запускаем проверку линтером
 	poetry run flake8 brain_games
+brain-even: #Игра чёт-нечёт
+	poetry run brain-even
+brain-calc: #Игра калькулятор
+	poetry run brain-calc
