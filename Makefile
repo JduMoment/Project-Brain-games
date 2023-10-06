@@ -14,3 +14,5 @@ brain-even: #Игра чёт-нечёт
 	poetry run brain-even
 brain-calc: #Игра калькулятор
 	poetry run brain-calc
+brain-gcd: #Игра НОД
+	poetry run brain-gcd

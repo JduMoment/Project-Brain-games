@@ -5,7 +5,7 @@ from brain_games.cli import welcome_user
 from brain_games.nod import nod
 
 
-def calc_game():
+def gcd_game():
     user_name = welcome_user()
     print('Find the greatest common divisor of given numbers.')
     sum_correct_answers = 0
@@ -18,8 +18,8 @@ def calc_game():
         answer = prompt.string('Your answer: ')
         i = 0
         result = 1
-        while i != len(multipliers_first_num) - 1 or i != len(multipliers_last_num) - 1:
-            if multipliers_first_num[i] == multipliers_first_num[i]:
+        while i < len(multipliers_first_num) - 1 or i < len(multipliers_last_num) - 1:
+            if multipliers_first_num[i] == multipliers_last_num[i]:
                 result *= multipliers_first_num[i]
                 i += 1
             else:
@@ -30,6 +30,3 @@ def calc_game():
         else:
             return print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.\nLet's try again, {user_name}!")
     return print('Congratulations, ' + user_name + '!')
-
-
-calc_game()
