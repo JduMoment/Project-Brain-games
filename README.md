@@ -5,4 +5,5 @@
 Вот тут можно посмотреть калькуляцию: https://asciinema.org/a/oDvd2aqzRFf70789t9i0tuKcn
 НОД лежит тут: https://asciinema.org/a/YgfEtcV4N8n2wkzl64Mr6h6jY
 Арифметическая прогрессия: https://asciinema.org/a/8SPlRoZnm0CO9OBNw69hdKRTL
+Простые числа: https://asciinema.org/a/gS9FPB6LBPwVGlA7dq9CUTW2Z
 

@@ -16,5 +16,7 @@ brain-calc: #Игра калькулятор
 	poetry run brain-calc
 brain-gcd: #Игра НОД
 	poetry run brain-gcd
-brain-arithm-progress: #Игра арифметическая прогрессия
+brain-progression: #Игра арифметическая прогрессия
 	poetry run brain-arithm-progress
+brain-prime: #Игра "простое число или нет"
+	poetry run brain-prime
