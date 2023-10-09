@@ -7,3 +7,4 @@
 Арифметическая прогрессия: https://asciinema.org/a/8SPlRoZnm0CO9OBNw69hdKRTL
 Простые числа: https://asciinema.org/a/gS9FPB6LBPwVGlA7dq9CUTW2Z
 
+Текст для теста
