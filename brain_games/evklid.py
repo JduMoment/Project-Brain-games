@@ -8,6 +8,6 @@ def theory_of_evklid(num1, num2):
 
 def nod_evklid(numeric1, numeric2):
     if numeric1 > numeric2:
-        theory_of_evklid(numeric1, numeric2)
+        return theory_of_evklid(numeric1, numeric2)
     elif numeric2 > numeric1:
-        theory_of_evklid(numeric2, numeric1)
+        return theory_of_evklid(numeric2, numeric1)
