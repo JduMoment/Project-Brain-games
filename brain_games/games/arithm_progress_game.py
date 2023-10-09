@@ -21,5 +21,7 @@ def arithm_progress():
             print('Correct!')
             sum_correct_answers += 1
         else:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was '{random_number}'.\nLet's try again, {user_name}!")
+            return print(f"'{answer}' is wrong answer ;(."
+                         f"Correct answer was '{random_number}'.\n"
+                         f"Let's try again, {user_name}!")
     return print('Congratulations, ' + user_name + '!')

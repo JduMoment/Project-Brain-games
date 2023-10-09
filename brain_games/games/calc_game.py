@@ -24,6 +24,7 @@ def calc_game():
             print('Correct!')
             sum_correct_answers += 1
         else:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was '{summ}'.\nLet's try again, {user_name}!")
+            return print(f"'{answer}' is wrong answer ;(."
+                         f"Correct answer was '{summ}'.\n"
+                         f"Let's try again, {user_name}!")
     return print('Congratulations, ' + user_name + '!')
-    

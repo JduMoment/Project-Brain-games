@@ -13,12 +13,13 @@ def prime_number():
         print(f"Question: {num}")
         answer = prompt.string('Your answer: ')
         prime = is_prime(num)
-        if prime == True and answer == 'yes':
+        if prime is True and answer == 'yes':
             print('Correct!')
             sum_correct_answers += 1
-        elif prime == False and answer == 'no':
+        elif prime is False and answer == 'no':
             print('Correct!')
             sum_correct_answers += 1
         else:
-            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {user_name}!")
+            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\n"
+                         f"Let's try again, {user_name}!")
     return print('Congratulations, ' + user_name + '!')

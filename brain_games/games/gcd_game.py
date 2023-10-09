@@ -1,5 +1,4 @@
 from random import randint
-from random import choice
 import prompt
 from brain_games.cli import welcome_user
 from brain_games.evklid import nod_evklid
@@ -24,5 +23,7 @@ def gcd_game():
             print('Correct!')
             sum_correct_answers += 1
         else:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was '{nod}'.\nLet's try again, {user_name}!")
+            return print(f"'{answer}' is wrong answer ;(."
+                         f"Correct answer was '{nod}'.\n"
+                         f"Let's try again, {user_name}!")
     return print('Congratulations, ' + user_name + '!')
