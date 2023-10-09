@@ -9,7 +9,8 @@ def arithm_progress():
     print('What number is missing in the progression?')
     sum_correct_answers = 0
     while sum_correct_answers != 3:
-        arithm_progress = list(range(randint(1, 100), randint(1, 1000), randint(2, 7)))
+        arithm_progress = list(range(randint(1, 100), randint(1, 1000),
+                                     randint(2, 7)))
         arithm_progress = arithm_progress[0:randint(5, 15)]
         random_number = choice(arithm_progress)
         for index, element in enumerate(arithm_progress):

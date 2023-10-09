@@ -1,19 +1,13 @@
-def nod_evklid(num1, num2):
-    if num1 > num2:
-        while num1 > 0 and num2 > 0:
-            num1 = num1 % num2
-            if num1 != 0:
-                num2 = num2 % num1
-        if num1 > num2:
-            return num1
-        else:
-            return num2
-    elif num2 > num1:
-        while num2 > 0 and num1 > 0:
+def theory_of_evklid(num1, num2):
+    while num1 > 0 and num2 > 0:
+        num1 = num1 % num2
+        if num1 != 0:
             num2 = num2 % num1
-            if num2 != 0:
-                num1 = num1 % num2
-        if num2 > num1:
-            return num2
-        else:
-            return num1
+    return max(num1, num2)
+
+
+def nod_evklid(numeric1, numeric2):
+    if numeric1 > numeric2:
+        theory_of_evklid(numeric1, numeric2)
+    elif numeric2 > numeric1:
+        theory_of_evklid(numeric2, numeric1)
