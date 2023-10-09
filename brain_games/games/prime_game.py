@@ -6,7 +6,7 @@ from brain_games.is_prime import is_prime
 
 def prime_number():
     user_name = welcome_user()
-    print('Find the greatest common divisor of given numbers.')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     sum_correct_answers = 0
     while sum_correct_answers != 3:
         num = randint(1, 1000)
