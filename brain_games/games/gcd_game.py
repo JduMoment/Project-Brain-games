@@ -1,7 +1,25 @@
 from random import randint
+
+
 import prompt
+
+
 from brain_games.cli import welcome_user
-from brain_games.evklid import nod_evklid
+
+
+def theory_of_evklid(num1, num2): #Вычисляем dd
+    while num1 > 0 and num2 > 0:
+        num1 = num1 % num2
+        if num1 != 0:
+            num2 = num2 % num1
+    return max(num1, num2)
+
+
+def what_is_gcd(numeric1, numeric2):
+    if numeric1 > numeric2:
+        return theory_of_evklid(numeric1, numeric2)
+    elif numeric2 > numeric1:
+        return theory_of_evklid(numeric2, numeric1)
 
 
 def gcd_game():
@@ -18,7 +36,7 @@ def gcd_game():
         elif first_num == 1 or last_num == 1:
             nod = 1
         else:
-            nod = nod_evklid(first_num, last_num)
+            nod = what_is_gcd(first_num, last_num)
         if int(answer) == int(nod):
             print('Correct!')
             sum_correct_answers += 1

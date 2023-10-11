@@ -1,6 +1,10 @@
 from random import randint
 from random import choice
+
+
 import prompt
+
+
 from brain_games.cli import welcome_user
 
 

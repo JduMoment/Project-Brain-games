@@ -1,7 +1,20 @@
 import prompt
+
+
 from brain_games.cli import welcome_user
+
+
 from random import randint
-from brain_games.is_prime import is_prime
+
+
+def is_prime(num):
+    i = 2
+    while num > i:
+        is_prime = num % i
+        i += 1
+        if is_prime == 0:
+            return False
+    return True
 
 
 def prime_number():

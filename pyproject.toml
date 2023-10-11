@@ -1,9 +1,15 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Five math games designed to test your skills."
 authors = ["Kuragin Ivan <curagin.vanya@yandex.ru>"]
 readme = "README.md"
+classifiers = [
+	"Topic :: Games/Entertainment :: Puzzle Games"
+	"Programming Language :: Python :: 3.10"
+	"Development Status :: 5 - Production/Stable"
+]
+repository = "https://github.com/JduMoment/python-project-49"
 packages = [
 	{include = "brain_games"},
 ]

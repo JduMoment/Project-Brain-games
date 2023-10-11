@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-
 from brain_games.games.arithm_progress_game import arithm_progress
 
 
