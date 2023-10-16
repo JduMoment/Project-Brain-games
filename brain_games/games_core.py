@@ -1,27 +1,27 @@
 from brain_games.cli import welcome_user
-from brain_games.games.even_game import even_odd_game
+from brain_games.games import even_game
+from brain_games.games import calc_game
+from brain_games.games import gcd_game
+from brain_games.games import arithm_progress_game
+from brain_games.games import prime_game
 
 
 import prompt
 
 
-from random import randint
-
-
-def core_game(game):
+def play(game):
     user_name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(game.RULES)
     sum_correct_answers = 0
-    while sum_correct_answers != 3:
-        random_number = randint(1, 50)
-        print('Question: ' + str(random_number))
-        answer = prompt.string('Your answer: ')
-        is_right = game(answer, random_number)
-        if is_right is True:
+    correct_answers_for_win = 3
+    while sum_correct_answers != correct_answers_for_win:
+        question, correct_answer = game()
+        user_answer = prompt.string('Your answer: ')
+        if correct_answer == user_answer:
             print('Correct!')
             sum_correct_answers += 1
         else:
-            return print(f"'{answer}' is wrong answer ;(."
-                         f"Correct answer was '{is_right}'.\n"
+            return print(f"'{user_answer}' is wrong answer ;(."
+                         f"Correct answer was '{correct_answer}'.\n"
                          f"Let's try again, {user_name}!")
-    return print('Congratulations, ' + user_name + '!')
+    return print(f"Congratulations, {user_name}!")

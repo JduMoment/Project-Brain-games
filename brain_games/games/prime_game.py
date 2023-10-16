@@ -1,9 +1,6 @@
 import prompt
 
 
-from brain_games.cli import welcome_user
-
-
 from random import randint
 
 
@@ -16,23 +13,14 @@ def is_prime(num):
             return False
     return True
 
+def generate_question_and_answer():
+    num = randint(1, 1000)
+    question = print(f"Question: {num}")
+    prime = is_prime(num)
+    if prime is True:
+        correct_answer = 'yes'
+    elif prime is False:
+        correct_answer = 'no'
+    return question, correct_answer
 
-def prime_number():
-    user_name = welcome_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    sum_correct_answers = 0
-    while sum_correct_answers != 3:
-        num = randint(1, 1000)
-        print(f"Question: {num}")
-        answer = prompt.string('Your answer: ')
-        prime = is_prime(num)
-        if prime is True and answer == 'yes':
-            print('Correct!')
-            sum_correct_answers += 1
-        elif prime is False and answer == 'no':
-            print('Correct!')
-            sum_correct_answers += 1
-        else:
-            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\n"
-                         f"Let's try again, {user_name}!")
-    return print('Congratulations, ' + user_name + '!')
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
