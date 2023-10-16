@@ -8,8 +8,9 @@ def generate_question_and_answer():
     lower_progress_limit = randint(1, 95)
     highest_progress_limit = randint(100, 1000)
     progress_step = randint(2, 7)
-    random_arithm_progress = list(range(lower_progress_limit, highest_progress_limit,
-                                  progress_step))
+    random_arithm_progress = list(range(lower_progress_limit,
+                                        highest_progress_limit,
+                                        progress_step))
     limit_lenght_progression = randint(5, 15)
     random_arithm_progress = random_arithm_progress[0:limit_lenght_progression]
     correct_answer = choice(random_arithm_progress)
