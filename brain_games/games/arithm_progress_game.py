@@ -5,9 +5,13 @@ RULES = 'What number is missing in the progression?'
 
 
 def generate_question_and_answer():
-    random_arithm_progress = list(range(randint(1, 95), randint(100, 1000),
-                                  randint(2, 7)))
-    random_arithm_progress = random_arithm_progress[0:randint(5, 15)]
+    lower_progress_limit = randint(1, 95)
+    highest_progress_limit = randint(100, 1000)
+    progress_step = randint(2, 7)
+    random_arithm_progress = list(range(lower_progress_limit, highest_progress_limit,
+                                  progress_step))
+    limit_lenght_progression = randint(5, 15)
+    random_arithm_progress = random_arithm_progress[0:limit_lenght_progression]
     correct_answer = choice(random_arithm_progress)
     for index, element in enumerate(random_arithm_progress):
         if element == correct_answer:

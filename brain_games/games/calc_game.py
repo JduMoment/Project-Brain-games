@@ -4,8 +4,10 @@ RULES = "What is the result of the expression?"
 
 
 def generate_question_and_answer():
-    first_num = randint(0, 100)
-    last_num = randint(0, 100)
+    smallest_number = 0
+    biggest_number = 100
+    first_num = randint(smallest_number, biggest_number)
+    last_num = randint(smallest_number, biggest_number)
     random_operand = choice(['+', '-', '*'])
     if random_operand == '+':
         correct_answer = first_num + last_num

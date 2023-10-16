@@ -22,8 +22,10 @@ def find_gcd(numeric1, numeric2):
 
 
 def generate_question_and_answer():
-    random_first_num = randint(1, 75)
-    random_last_num = randint(1, 75)
+    smallest_number = 0
+    biggest_number = 100
+    random_first_num = randint(smallest_number, biggest_number)
+    random_last_num = randint(smallest_number, biggest_number)
     correct_answer = find_gcd(random_first_num, random_last_num)
     question = f"Question: {random_first_num} {random_last_num}"
     return question, str(correct_answer)

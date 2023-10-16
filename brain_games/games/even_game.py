@@ -4,7 +4,9 @@ RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def generate_question_and_answer():
-    random_number = randint(1, 100)
+    smallest_number = 0
+    biggest_number = 100
+    random_number = randint(smallest_number, biggest_number)
     if random_number % 2 == 0:
         correct_answer = 'yes'
     elif random_number % 2 != 0:
