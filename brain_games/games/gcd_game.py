@@ -3,7 +3,7 @@ from random import randint
 RULES = 'Find the greatest common divisor of given numbers.'
 
 
-def theory_of_evklid(num1, num2):
+def  calculate_gcd(num1, num2):
     while num1 > 0 and num2 > 0:
         num1 = num1 % num2
         if num1 != 0:
@@ -11,21 +11,19 @@ def theory_of_evklid(num1, num2):
     return max(num1, num2)
 
 
-def what_is_gcd(numeric1, numeric2):
-    if numeric1 > numeric2:
-        return theory_of_evklid(numeric1, numeric2)
-    elif numeric2 > numeric1:
-        return theory_of_evklid(numeric2, numeric1)
+def find_gcd(numeric1, numeric2):
+    if numeric1 == numeric2:
+        return numeric1
+    elif numeric1 == 1 or numeric2 == 1:
+        return 1
+    elif numeric1 > numeric2:
+        return calculate_gcd(numeric1, numeric2)
+    return calculate_gcd(numeric2, numeric1)
 
 
 def generate_question_and_answer():
-    RANDOM_FIRST_NUM = randint(1, 75)
-    RANDOM_LAST_NUM = randint(1, 75)
-    question = print(f"Question: {RANDOM_FIRST_NUM} {RANDOM_LAST_NUM}")
-    if RANDOM_FIRST_NUM == RANDOM_LAST_NUM:
-        correct_answer = RANDOM_FIRST_NUM
-    elif RANDOM_FIRST_NUM == 1 or RANDOM_LAST_NUM == 1:
-        correct_answer = 1
-    else:
-        correct_answer = what_is_gcd(RANDOM_FIRST_NUM, RANDOM_LAST_NUM)
+    random_first_num = randint(1, 75)
+    random_last_num = randint(1, 75)
+    correct_answer = what_is_gcd(random_first_num, random_last_num)
+    question = f"Question: {random_first_num} {random_last_num}"
     return question, str(correct_answer)

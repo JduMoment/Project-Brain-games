@@ -1,18 +1,17 @@
-from random import randint
-from random import choice
+from random import randint, choice
 
 RULES = "What is the result of the expression?"
 
 
 def generate_question_and_answer():
-    FIRST_NUM = randint(0, 100)
-    LAST_NUM = randint(0, 100)
+    first_num = randint(0, 100)
+    last_num = randint(0, 100)
     random_operand = choice(['+', '-', '*'])
-    question = print(f"Question: {FIRST_NUM} {random_operand} {LAST_NUM}")
     if random_operand == '+':
-        correct_answer = FIRST_NUM + LAST_NUM
+        correct_answer = first_num + last_num
     elif random_operand == '-':
-        correct_answer = FIRST_NUM - LAST_NUM
+        correct_answer = first_num - last_num
     elif random_operand == '*':
-        correct_answer = FIRST_NUM * LAST_NUM
+        correct_answer = first_num * last_num
+    question = f"Question: {first_num} {random_operand} {last_num}"
     return question, str(correct_answer)

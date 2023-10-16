@@ -1,18 +1,17 @@
-from random import randint
-from random import choice
+from random import randint, choice
 
 
 RULES = 'What number is missing in the progression?'
 
 
 def generate_question_and_answer():
-    RANDOM_ARITHM_PROGRESS = list(range(randint(1, 95), randint(100, 1000),
+    random_arithm_progress = list(range(randint(1, 95), randint(100, 1000),
                                   randint(2, 7)))
-    RANDOM_ARITHM_PROGRESS = RANDOM_ARITHM_PROGRESS[0:randint(5, 15)]
-    correct_answer = choice(RANDOM_ARITHM_PROGRESS)
-    for index, element in enumerate(RANDOM_ARITHM_PROGRESS):
+    random_arithm_progress = random_arithm_progress[0:randint(5, 15)]
+    correct_answer = choice(random_arithm_progress)
+    for index, element in enumerate(random_arithm_progress):
         if element == correct_answer:
-            RANDOM_ARITHM_PROGRESS[index] = '..'
-    RANDOM_ARITHM_PROGRESS = ' '.join(map(str, RANDOM_ARITHM_PROGRESS))
-    question = print(f"Question: {RANDOM_ARITHM_PROGRESS}")
+            random_arithm_progress[index] = '..'
+    random_arithm_progress = ' '.join(map(str, random_arithm_progress))
+    question = f"Question: {random_arithm_progress}"
     return question, str(correct_answer)
