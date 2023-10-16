@@ -1,7 +1,6 @@
-import prompt
-
-
 from random import randint
+
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(num):
@@ -13,6 +12,7 @@ def is_prime(num):
             return False
     return True
 
+
 def generate_question_and_answer():
     num = randint(1, 1000)
     question = print(f"Question: {num}")
@@ -22,5 +22,3 @@ def generate_question_and_answer():
     elif prime is False:
         correct_answer = 'no'
     return question, correct_answer
-
-RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'

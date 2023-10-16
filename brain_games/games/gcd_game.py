@@ -1,9 +1,9 @@
 from random import randint
 
-
 RULES = 'Find the greatest common divisor of given numbers.'
 
-def theory_of_evklid(num1, num2): #Вычисляем dd
+
+def theory_of_evklid(num1, num2):
     while num1 > 0 and num2 > 0:
         num1 = num1 % num2
         if num1 != 0:
@@ -16,6 +16,7 @@ def what_is_gcd(numeric1, numeric2):
         return theory_of_evklid(numeric1, numeric2)
     elif numeric2 > numeric1:
         return theory_of_evklid(numeric2, numeric1)
+
 
 def generate_question_and_answer():
     first_num = randint(1, 75)

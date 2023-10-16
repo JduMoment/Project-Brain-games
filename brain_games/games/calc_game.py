@@ -1,13 +1,8 @@
 from random import randint
 from random import choice
 
+RULES = "What is the result of the expression?"
 
-import prompt
-
-
-from brain_games.cli import welcome_user
-
-RULES = f"What is the result of the expression?"
 
 def generate_question_and_answer():
     first_num = randint(0, 100)
