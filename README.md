@@ -7,19 +7,19 @@ This is a set of simple games related to numbers.
 
 To install the game on Linux, press **Alt** + **Ctrl** + **T** and enter `Make package-install`
 
-Enter `brain-even` to play "Even-odd"\
+Enter `make brain-even` in terminal to play "Even-odd"\
 This ascii demonstrates the installation of games and the launch of the game "Even-Odd": https://asciinema.org/a/SqZKdMwO14G9bxOtegGd6GKEA
 
-Enter `brain-calc` to play "Calculator"\
+Enter `make brain-calc` to play "Calculator"\
 Ascii game "Calculator": https://asciinema.org/a/oDvd2aqzRFf70789t9i0tuKcn
 
-Enter `brain-gcd` to play "Greatest common divisor"\
+Enter `make brain-gcd` to play "Greatest common divisor"\
 Ascii game "Greatest common divisor": https://asciinema.org/a/YgfEtcV4N8n2wkzl64Mr6h6jY
 
-Enter `brain-progression` to play "Arithmetic progression"\
+Enter `make brain-progression` to play "Arithmetic progression"\
 Ascii game "Arithmetic progression": https://asciinema.org/a/hVcbbsZoTM51mfaF8CyMwrgd4
 
-Enter `brain-prime` to play "Simple number or no?"\
+Enter `make brain-prime` to play "Simple number or no?"\
 Ascii game "Simple number or no?": https://asciinema.org/a/gS9FPB6LBPwVGlA7dq9CUTW2Z
 
 
