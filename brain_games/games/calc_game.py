@@ -5,14 +5,14 @@ RULES = "What is the result of the expression?"
 
 
 def generate_question_and_answer():
-    first_num = randint(0, 100)
-    last_num = randint(0, 100)
-    operand = choice(['+', '-', '*'])
-    question = print(f"Question: {first_num} {operand} {last_num}")
-    if operand == '+':
-        correct_answer = first_num + last_num
-    elif operand == '-':
-        correct_answer = first_num - last_num
-    elif operand == '*':
-        correct_answer = first_num * last_num
+    RANDOM_FIRST_NUM = randint(0, 100)
+    RANDOM_LAST_NUM = randint(0, 100)
+    RANDOM_OPERAND = choice(['+', '-', '*'])
+    question = print(f"Question: {RANDOM_FIRST_NUM} {RANDOM_OPERAND} {RANDOM_LAST_NUM}")
+    if RANDOM_OPERAND == '+':
+        correct_answer = RANDOM_FIRST_NUM + RANDOM_LAST_NUM
+    elif RANDOM_OPERAND == '-':
+        correct_answer = RANDOM_FIRST_NUM - RANDOM_LAST_NUM
+    elif RANDOM_OPERAND == '*':
+        correct_answer = RANDOM_FIRST_NUM * RANDOM_LAST_NUM
     return question, str(correct_answer)

@@ -14,9 +14,9 @@ def is_prime(num):
 
 
 def generate_question_and_answer():
-    num = randint(1, 1000)
-    question = print(f"Question: {num}")
-    prime = is_prime(num)
+    RANDOM_NUM = randint(1, 1000)
+    question = print(f"Question: {RANDOM_NUM}")
+    prime = is_prime(RANDOM_NUM)
     if prime is True:
         correct_answer = 'yes'
     elif prime is False:

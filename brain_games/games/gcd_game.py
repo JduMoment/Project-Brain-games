@@ -19,13 +19,13 @@ def what_is_gcd(numeric1, numeric2):
 
 
 def generate_question_and_answer():
-    first_num = randint(1, 75)
-    last_num = randint(1, 75)
-    question = print(f"Question: {first_num} {last_num}")
-    if first_num == last_num:
-        correct_answer = first_num
-    elif first_num == 1 or last_num == 1:
+    RANDOM_FIRST_NUM = randint(1, 75)
+    RANDOM_LAST_NUM = randint(1, 75)
+    question = print(f"Question: {RANDOM_FIRST_NUM} {RANDOM_LAST_NUM}")
+    if RANDOM_FIRST_NUM == RANDOM_LAST_NUM:
+        correct_answer = RANDOM_FIRST_NUM
+    elif RANDOM_FIRST_NUM == 1 or RANDOM_LAST_NUM == 1:
         correct_answer = 1
     else:
-        correct_answer = what_is_gcd(first_num, last_num)
+        correct_answer = what_is_gcd(RANDOM_FIRST_NUM, RANDOM_LAST_NUM)
     return question, str(correct_answer)

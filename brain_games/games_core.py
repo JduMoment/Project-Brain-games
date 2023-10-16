@@ -8,8 +8,8 @@ def play(game):
     user_name = welcome_user()
     print(game.RULES)
     sum_correct_answers = 0
-    correct_answers_for_win = 3
-    while sum_correct_answers != correct_answers_for_win:
+    COORECT_ANSWERS_FOR_WIN = 3
+    while sum_correct_answers != COORECT_ANSWERS_FOR_WIN:
         question, correct_answer = game.generate_question_and_answer()
         user_answer = prompt.string('Your answer: ')
         if correct_answer == user_answer:
