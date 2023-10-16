@@ -3,7 +3,7 @@ from random import randint
 RULES = 'Find the greatest common divisor of given numbers.'
 
 
-def  calculate_gcd(num1, num2):
+def calculate_gcd(num1, num2):
     while num1 > 0 and num2 > 0:
         num1 = num1 % num2
         if num1 != 0:
@@ -24,6 +24,6 @@ def find_gcd(numeric1, numeric2):
 def generate_question_and_answer():
     random_first_num = randint(1, 75)
     random_last_num = randint(1, 75)
-    correct_answer = what_is_gcd(random_first_num, random_last_num)
+    correct_answer = find_gcd(random_first_num, random_last_num)
     question = f"Question: {random_first_num} {random_last_num}"
     return question, str(correct_answer)
