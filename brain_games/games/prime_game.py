@@ -2,6 +2,9 @@ from random import randint
 
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
+SMALLEST_NUMBER = 0
+BIGGEST_NUMBER = 100
+
 
 def is_prime(num):
     i = 2
@@ -14,9 +17,7 @@ def is_prime(num):
 
 
 def generate_question_and_answer():
-    smallest_number = 0
-    biggest_number = 1000
-    random_num = randint(smallest_number, biggest_number)
+    random_num = randint(SMALLEST_NUMBER, BIGGEST_NUMBER)
     correct_answer = "yes" if is_prime(random_num) else "no"
-    question = f"Question: {random_num}"
+    question = f"{random_num}"
     return question, correct_answer

@@ -11,9 +11,9 @@ def play(game):
     sum_correct_answers = 0
     while sum_correct_answers != COORECT_ANSWERS_FOR_WIN:
         question, correct_answer = game.generate_question_and_answer()
-        print(question)
+        print(f"Qestion: {question}")
         user_answer = prompt.string('Your answer: ')
-        if correct_answer == user_answer:
+        if str(correct_answer) == str(user_answer):
             print('Correct!')
             sum_correct_answers += 1
         else:
